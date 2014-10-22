@@ -12,14 +12,14 @@ class monitoring::zabbix::server-all(
   class { "apache":
     port => $listen_port
   } ->
-  class { 'zabbix::server':
-    db_password => $db_password
-  } ->
-  class { 'zabbix::proxy':
-    server_name => $zabbix_server,
-    db_type     => $db_type
-  } ->
-  class {'zabbix::agent':
-    zabbix_server => $zabbix_server
-  }
+#  class { 'zabbix::server':
+#    db_password => $db_password
+#  } ->
+#  class { 'zabbix::proxy':
+#    server_name => $zabbix_server,
+#    db_type     => $db_type
+#  } ->
+#  class {'zabbix::agent':
+#    zabbix_server => $zabbix_server
+#  }
 }
