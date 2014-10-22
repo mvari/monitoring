@@ -11,7 +11,8 @@ class monitoring::zabbix::server-all(
   } ->
   class { "apache":
     port => $listen_port
-  } ->
+}
+#  } ->
 #  class { 'zabbix::server':
 #    db_password => $db_password
 #  } ->
